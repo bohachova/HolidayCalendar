@@ -1,0 +1,57 @@
+﻿<Window x:Name="calendarMainWindow" x:Class="HolidayCalendar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HolidayCalendar"
+        mc:Ignorable="d"
+        Title="Holiday Calendar" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="/Icon_Calendar.png" Background="#FFE6E2D3">
+    <Grid>
+        <StackPanel x:Name="datePickPanel" Margin="0,0,0,363" Background="#FFE0CAB3" Orientation="Horizontal">
+            <Button x:Name="yearDecrementButton" FontFamily="Marlett" FontSize="20" Content="6" Height="25" Width="25" Canvas.Left="26" Canvas.Top="12" HorizontalAlignment="Left" VerticalAlignment="Center" Background="{x:Null}" Foreground="#FF935A20" BorderBrush="{x:Null}" Cursor="Hand" Margin="20,0,5,0" Click="yearDecrementButton_Click" />
+            <Label x:Name="selectedYearLabel" Content="2023" HorizontalAlignment="Left" Canvas.Left="54" Canvas.Top="6" VerticalAlignment="Top" Width="63" FontFamily="Comic Sans MS" FontSize="20" FontWeight="Bold" Foreground="#FF935A20" Margin="0,7,5,0"/>
+            <Button x:Name="yearIncrementButton" FontFamily="Marlett" FontSize="20" Content="5" Height="25" Width="25" Canvas.Left="117" Canvas.Top="12" HorizontalAlignment="Left" VerticalAlignment="Center" Background="{x:Null}" Foreground="#FF935A20" BorderBrush="{x:Null}" Cursor="Hand" Margin="0,0,40,0" Click="yearIncrementButton_Click"/>
+            <Button x:Name="monthDecrementButton" FontFamily="Marlett" FontSize="20" Content="6" Height="25" Width="25" Background="{x:Null}" Foreground="#FF935A20" BorderBrush="{x:Null}" Cursor="Hand" Canvas.Left="186" Canvas.Top="11" Margin="0,0,5,0" Click="monthDecrementButton_Click"/>
+            <Label x:Name="selectedMonthLabel" Content="January" FontFamily="Comic Sans MS" FontSize="20" FontWeight="Bold" Foreground="#FF935A20" HorizontalAlignment="Left" Canvas.Left="216" Canvas.Top="6" VerticalAlignment="Top" MouseEnter="MonthsPopup_MouseEnter" Margin="0,7,5,0"/>
+            <Button x:Name="monthIncrementButton" FontFamily="Marlett" FontSize="20" Content="5" Height="25" Width="25" Background="{x:Null}" Foreground="#FF935A20" BorderBrush="{x:Null}" Cursor="Hand" Canvas.Left="305" Canvas.Top="12" Margin="0,0,40,0" Click="monthIncrementButton_Click"/>
+        </StackPanel>
+        <Grid x:Name="loadingGrid" Visibility="Hidden" Background="Black">
+            <Label Content="Loading..." FontSize="24"  Foreground="IndianRed" HorizontalAlignment="center" VerticalAlignment="Top" FontFamily="Comic Sans MS" />
+        </Grid>
+        <Popup x:Name="monthsTooltip" PlacementTarget="{Binding ElementName=selectedMonthLabel}" MouseLeave="MonthsPopup_MouseLeave" Placement="Bottom" AllowsTransparency="True">
+            <StackPanel>
+                <TextBlock>
+                    <Hyperlink Click="MonthsLink_Click" >View all months</Hyperlink>
+                </TextBlock>
+            </StackPanel>
+        </Popup>
+        <Grid x:Name="calendarGrid" Margin="22,126,22,0" Height="288" VerticalAlignment="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+        </Grid >
+        <StackPanel x:Name="daysOfWeekPanel" Margin="0,0,0,313" Orientation="Horizontal" Height="50" VerticalAlignment="Bottom">
+            <Label Tag="Monday" Content="M" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="DarkGray" Grid.Row="0" Grid.Column="0" Margin="55,0,0,0" />
+            <Label Tag="Tuesday" Content="Tu" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="DarkGray" Grid.Row="0" Grid.Column="1" Margin="75,0,0,0" />
+            <Label Tag="Wednesday" Content="W" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="DarkGray" Grid.Row="0" Grid.Column="2" Margin="75,0,0,0" />
+            <Label Tag="Thursday" Content="Th" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="DarkGray" Grid.Row="0" Grid.Column="3" Margin="75,0,0,0" />
+            <Label Tag="Friday" Content="F" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="DarkGray" Grid.Row="0" Grid.Column="4" Margin="75,0,0,0" />
+            <Label Tag="Saturday" Content="Sa" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="DarkGray" Grid.Row="0" Grid.Column="5" Margin="75,0,0,0" />
+            <Label Tag="Sunday" Content="Su" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="DarkGray" Grid.Row="0" Grid.Column="6" Margin="75,0,0,0" />
+        </StackPanel>
+    </Grid>
+</Window>

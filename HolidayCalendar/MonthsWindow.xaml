@@ -1,0 +1,34 @@
+﻿<Window x:Name="monthsWindow" x:Class="HolidayCalendar.MonthsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HolidayCalendar"
+        mc:Ignorable="d"
+        Title="Months" Height="250" Width="400" WindowStartupLocation="Manual" ResizeMode="NoResize" Icon="/Icon_Calendar.png" Background="#FFE0CAB3">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Content="January" Height="40" Grid.Row="0" Grid.Column="0" Foreground="#FF935A20" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="16" Cursor="Hand" Click="MonthButton_Click"/>
+        <Button Content="February" Height="40" Grid.Row="0" Grid.Column="1" Foreground="#FF935A20" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="16" Cursor="Hand" Click="MonthButton_Click"/>
+        <Button Content="March" Height="40" Grid.Row="0" Grid.Column="2" Foreground="#FF935A20" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="16" Cursor="Hand" Click="MonthButton_Click"/>
+        <Button Content="April" Height="40" Grid.Row="0" Grid.Column="3" Foreground="#FF935A20" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="16" Cursor="Hand" Click="MonthButton_Click"/>
+        <Button Content="May" Height="40" Grid.Row="1" Grid.Column="0" Foreground="#FF935A20" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="16" Cursor="Hand" Click="MonthButton_Click"/>
+        <Button Content="June" Height="40" Grid.Row="1" Grid.Column="1" Foreground="#FF935A20" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="16" Cursor="Hand" Click="MonthButton_Click"/>
+        <Button Content="July" Height="40" Grid.Row="1" Grid.Column="2" Foreground="#FF935A20" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="16" Cursor="Hand" Click="MonthButton_Click"/>
+        <Button Content="August" Height="40" Grid.Row="1" Grid.Column="3" Foreground="#FF935A20" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="16" Cursor="Hand" Click="MonthButton_Click"/>
+        <Button Content="September" Height="40" Grid.Row="2" Grid.Column="0" Foreground="#FF935A20" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="16" Cursor="Hand" Click="MonthButton_Click"/>
+        <Button Content="October" Height="40" Grid.Row="2" Grid.Column="1" Foreground="#FF935A20" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="16" Cursor="Hand" Click="MonthButton_Click"/>
+        <Button Content="November" Height="40" Grid.Row="2" Grid.Column="2" Foreground="#FF935A20" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="16" Cursor="Hand" Click="MonthButton_Click"/>
+        <Button Content="December" Height="40" Grid.Row="2" Grid.Column="3" Foreground="#FF935A20" FontFamily="Comic Sans MS" FontWeight="Bold" FontSize="16" Cursor="Hand" Click="MonthButton_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,16 @@
+﻿<Window x:Name="holidaysWindow" x:Class="HolidayCalendar.HolidaysWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HolidayCalendar"
+        mc:Ignorable="d"
+        Title="Holidays" Height="450" Width="400" ResizeMode="NoResize" WindowStartupLocation="Manual" Icon="/Icon_Calendar.png" Background="#FFE6E2D3">
+    <Grid>
+        <Canvas Height="70" Margin="0,-28,0,392" Background="#FFE0CAB3">
+            <Label x:Name="infoLabel"  Content="Holidays on 23th January 2023" FontFamily="Comic Sans MS" FontSize="20" FontWeight="Bold" Foreground="#FF935A20" HorizontalAlignment="Center" Canvas.Left="41" Canvas.Top="32" VerticalAlignment="Top" />
+        </Canvas>
+        <StackPanel x:Name ="holidaysPanel" Margin="10,61,10,21">
+        </StackPanel >
+    </Grid>
+</Window>
